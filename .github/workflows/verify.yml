@@ -69,7 +69,7 @@ jobs:
           fetch-depth: 0
 
       # configure the gigalixir-actions with our credentials and app name
-      - uses: ah0y/gigalixir-action@v0.4.2
+      - uses: ah0y/gigalixir-action@master
         with:
           GIGALIXIR_USERNAME: ${{ secrets.GIGALIXIR_USERNAME }}
           GIGALIXIR_PASSWORD: ${{ secrets.GIGALIXIR_PASSWORD }}
