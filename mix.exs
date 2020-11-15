@@ -53,7 +53,8 @@ defmodule Giga.MixProject do
       {:credo, "~> 1.5"},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
       {:floki, "~> 0.29.0"},
-      {:ex_machina, "~> 2.4"}
+      {:ex_machina, "~> 2.4"},
+      {:distillery, "~> 2.1"}
     ]
   end
 
