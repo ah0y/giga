@@ -52,12 +52,3 @@ release :giga do
     :runtime_tools
   ]
 end
-
-
-task :clear_start_erl do
-  remote :giga do
-    "rm -f var/start_erl.data"
-  end
-end
-
-after_task(:deploy, :clear_start_erl)
