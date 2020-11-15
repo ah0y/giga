@@ -21,7 +21,19 @@ config :giga, GigaWeb.Endpoint,
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
-  metadata: [:request_id]
+  metadata: [:request_id],
+  backends: [:console, Sentry.LoggerBackend]
+
+config :sentry,
+  dsn: "https://0a5adbddd8ff48c99d3a70ad48b71355@o476990.ingest.sentry.io/5517311",
+  environment_name: Mix.env(),
+  included_environments: [:prod],
+  enable_source_code_context: true,
+  root_source_code_paths: [File.cwd!()],
+  tags: %{
+    env: "production"
+  },
+  before_send_event: {Giga.Sentry, :before_send}
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
