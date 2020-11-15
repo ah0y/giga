@@ -73,5 +73,5 @@ jobs:
         with:
           GIGALIXIR_USERNAME: ${{ secrets.GIGALIXIR_USERNAME }}
           GIGALIXIR_PASSWORD: ${{ secrets.GIGALIXIR_PASSWORD }}
-          GIGALIXIR_APP: giga
+          GIGALIXIR_APP: frayed-selfish-zethuswasp-774668bbf5-wmjpf
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
