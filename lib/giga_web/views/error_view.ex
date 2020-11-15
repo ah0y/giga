@@ -18,7 +18,7 @@ defmodule GigaWeb.ErrorView do
         """
 
       _ ->
-        "Internal Server Error"
+        "Not Found"
     end
   end
 
