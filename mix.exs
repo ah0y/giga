@@ -44,7 +44,16 @@ defmodule Giga.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:csv, "~> 2.4"},
+      {:pow, "~> 1.0"},
+      {:pow_assent, "~> 0.4.9"},
+      {:hackney, "~> 1.8"},
+      {:sentry, "~> 8.0"},
+      {:credo, "~> 1.5"},
+      {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
+      {:floki, "~> 0.29.0"},
+      {:ex_machina, "~> 2.4"}
     ]
   end
 
