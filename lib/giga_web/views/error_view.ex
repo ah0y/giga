@@ -31,7 +31,7 @@ defmodule GigaWeb.ErrorView do
         """
 
       _ ->
-        "Error"
+        "Internal Server Error"
     end
   end
 end
