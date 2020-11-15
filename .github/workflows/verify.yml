@@ -28,7 +28,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 13.8.0
+          node-version: 15.2.0
 
       - uses: actions/cache@v1
         id: deps-cache
@@ -69,7 +69,7 @@ jobs:
           fetch-depth: 0
 
       # configure the gigalixir-actions with our credentials and app name
-      - uses: mhanberg/gigalixir-action@v0.1.0
+      - uses: mhanberg/gigalixir-action@v0.4.0
         with:
           GIGALIXIR_USERNAME: ${{ secrets.GIGALIXIR_USERNAME }}
           GIGALIXIR_PASSWORD: ${{ secrets.GIGALIXIR_PASSWORD }}
