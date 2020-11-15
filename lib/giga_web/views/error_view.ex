@@ -17,7 +17,8 @@ defmodule GigaWeb.ErrorView do
           </script>
         """
 
-      _ ->
+      extra ->
+        Sentry.capture_message("whoops", extra: %{extra: extra})
         "Not Found"
     end
   end
