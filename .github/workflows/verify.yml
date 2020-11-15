@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        otp: [22.2.7]
-        elixir: [1.10.1]
+        otp: [23.1.2]
+        elixir: [1.11]
 
     services:
       db:
@@ -73,5 +73,5 @@ jobs:
         with:
           GIGALIXIR_USERNAME: ${{ secrets.GIGALIXIR_USERNAME }}
           GIGALIXIR_PASSWORD: ${{ secrets.GIGALIXIR_PASSWORD }}
-          GIGALIXIR_APP: <your app name>
+          GIGALIXIR_APP: giga
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
