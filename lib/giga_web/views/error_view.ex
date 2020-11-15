@@ -1,7 +1,7 @@
 defmodule GigaWeb.ErrorView do
   use GigaWeb, :view
 
-  def render(template, _assigns) do
+  def render("404.html", _assigns) do
     case Sentry.get_last_event_id_and_source() do
       {event_id, :plug} when is_binary(event_id) ->
         # can do %{eventId: event_id, title: "My custom title"}
@@ -20,7 +20,12 @@ defmodule GigaWeb.ErrorView do
       _ ->
         "Internal Server Error"
     end
+  end
 
+  # By default, Phoenix returns the status message from
+  # the template name. For example, "404.html" becomes
+  # "Not Found".
+  def template_not_found(template, _assigns) do
     Phoenix.Controller.status_message_from_template(template)
   end
 end
